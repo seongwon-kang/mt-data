@@ -32,14 +32,15 @@ namespace MtDataTests
             AbilityDB.Init(data);
             Assert.NotZero(AbilityDB.Instance.Count);
         }
-    }
-    public class Dummy
-    {
-        public string a { get; set; }
-        public string b { get; set; }
-        public string c { get; set; }
-        public string d { get; set; }
-        private int e;
-        public int E { get => e; set => e = value; }
+        [Test]
+        public void TestUnitDB()
+        {
+            string data = TestContext.RootPath + "Resources/MtUnit.txt";
+
+            Assert.NotZero(data.Length);
+
+            UnitDB.Init(data);
+            Assert.NotZero(UnitDB.Instance.Count);
+        }
     }
 }
