@@ -42,5 +42,15 @@ namespace MtDataTests
             UnitDB.Init(data);
             Assert.NotZero(UnitDB.Instance.Count);
         }
+        [Test]
+        public void TestEnemyDB()
+        {
+            string data = TestContext.RootPath + "Resources/MtEnemy.txt";
+
+            Assert.NotZero(data.Length);
+
+            EnemyDB.Init(data);
+            Assert.NotZero(EnemyDB.Instance.Count);
+        }
     }
 }

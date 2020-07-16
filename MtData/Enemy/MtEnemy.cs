@@ -1,16 +1,20 @@
 using FileHelpers;
 
 [DelimitedRecord("|")]
-public class MtUnit
-{
+public class MtEnemy {
+
     /*캐릭터 이름*/
     public string Name {get; set;}
     /*칭호*/
     public string Tag {get; set;}
     /*보행 그래픽 화상*/
     public string CharaChip {get; set;}
-    /*Lv*/
-    public int Lv {get; set;}
+    /*얼굴 그래픽 화상*/
+    public string __1 {get; set;}
+    /*전투 그래픽 폴더명*/
+    public string __2 {get; set;}
+    /*-----*/
+    public string __4 {get; set;}
     /*HP*/
     public int HP {get; set;}
     /*MaxHP*/
@@ -75,30 +79,48 @@ public class MtUnit
     public int Equip4 {get; set;}
     /*장비5*/
     public int Equip5 {get; set;}
-    /*장비가능 타입1*/
+    /*타입*/
+    public int type {get; set;}
+    /*----*/
+    public string __5 {get; set;}
+    /*[적전용]입수 아이템*/
     public int _1 {get; set;}
-    /*장비가능 타입2*/
+    /*┗아이템 입수율[%]*/
     public int _2 {get; set;}
-    /*장비가능 타입3*/
+    /*[적전용]입수 의상*/
     public int _3 {get; set;}
-    /*장비가능 타입4*/
+    /*┗의상 입수율[%]*/
     public int _4 {get; set;}
-    /*장비가능 타입5*/
+    /*[적전용]입수 액세서리*/
     public int _5 {get; set;}
-    /*장비가능 타입6*/
+    /*┗액세서리 입수율[%]*/
     public int _6 {get; set;}
-    /*현재 Lv 취득 경험치*/
-    public int CurrentExp {get; set;}
-    /*현재 Lv 필요 경험치*/
-    public int MaxExp {get; set;}
-    /*필요 경험치 증가율[%]*/
-    public int Growth_MaxExp {get; set;}
+    /*취득경험치*/
+    public int EarnExp {get; set;}
+    /*취득경험치증가량/1Lv*/
+    public int Growth_EarnExp {get; set;}
+    /*취득금액*/
+    public int EarnGold {get; set;}
+    /*취득금액증가량/1Lv*/
+    public int Growth_EarnGold {get; set;}
     /*이동력*/
     public int Move {get; set;}
     /*상단이동력*/
     public int MoveUp {get; set;}
     /*하단이동력*/
     public int MoveDown {get; set;}
-    /*타입*/
-    public int Type {get; set;}
+    /*전투연출가능?(1=가능)*/
+    public int _6_5 {get; set;}
+    /*대사연출가능?(1=가능)*/
+    public int _7 {get; set;}
+    /*처치안해도 됨?(1=됨)*/
+    public int _8 {get; set;}
+    /*방향고정?(1=고정)*/
+    public int _9 {get; set;}
+    /*취득반짝조각 수*/
+    public int Shiny {get; set;}
+    /*처음부터 트리거ON(1=YES)*/
+    public int _11 {get; set;}
+    /*반격한다(1=YES)*/
+    public int _12 {get; set;}
 }
