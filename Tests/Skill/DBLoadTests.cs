@@ -5,7 +5,7 @@ using ServiceStack;
 
 namespace MtDataTests
 {
-    public class SkillDBTests
+    public class DBLoadTests
     {
         [SetUp]
         public void Setup()
@@ -13,30 +13,25 @@ namespace MtDataTests
         }
 
         [Test]
-        public void Test1()
+        public void TestSkillDB()
         {
-            string data = TestContext.RootPath + "Resources/MtSkill2.txt";
+            string data = TestContext.RootPath + "Resources/MtSkill.txt";
 
             Assert.NotZero(data.Length);
 
             SkillDB.Init(data);
             Assert.NotZero(SkillDB.Instance.Count);
         }
-
         [Test]
-        public void Test2()
+        public void TestAbilityDB()
         {
-            string dummy = "a,b,c,d,e\n5,\"6,7\",,9,";
-            var result = dummy.FromCsv<List<Dummy>>();
-            Assert.NotNull(result);
+            string data = TestContext.RootPath + "Resources/MtAbility.txt";
 
+            Assert.NotZero(data.Length);
 
-            Assert.AreEqual("5", result[0].a);
-            Assert.AreEqual("6,7", result[0].b);
-            Assert.AreEqual(null, result[0].c);
-            Assert.AreEqual("9", result[0].d);
+            AbilityDB.Init(data);
+            Assert.NotZero(AbilityDB.Instance.Count);
         }
-
     }
     public class Dummy
     {
