@@ -7,7 +7,7 @@ public class UnitDB {
     public static void Init(string path) {
         FileHelperEngine engine = new FileHelperEngine(typeof(MtUnit));
         
-        List<object> units = engine.ReadFileAsList(path);
+        List<object> units = engine.ReadStringAsList(path);
         int i = 0;
 
         foreach(var item in units) {

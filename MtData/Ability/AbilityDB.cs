@@ -6,8 +6,7 @@ public class AbilityDB {
     
     public static void Init(string path) {
         FileHelperEngine engine = new FileHelperEngine(typeof(MtAbility));
-        
-        List<object> abilitys = engine.ReadFileAsList(path);
+        List<object> abilitys = engine.ReadStringAsList(path);
         int i = 0;
 
         foreach(var item in abilitys) {

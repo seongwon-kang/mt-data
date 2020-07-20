@@ -8,7 +8,7 @@ public class SkillDB {
     public static void Init(string path) {
         FileHelperEngine engine = new FileHelperEngine(typeof(MtSkill));
         
-        List<object> skills = engine.ReadFileAsList(path);
+        List<object> skills = engine.ReadStringAsList(path);
         int i = 0;
 
         foreach(var item in skills) {

@@ -7,7 +7,7 @@ public class EnemyDB {
     public static void Init(string path) {
         FileHelperEngine engine = new FileHelperEngine(typeof(MtEnemy));
         
-        List<object> enemys = engine.ReadFileAsList(path);
+        List<object> enemys = engine.ReadStringAsList(path);
         int i = 0;
 
         foreach(var item in enemys) {
