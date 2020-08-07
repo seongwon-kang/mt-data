@@ -22,7 +22,9 @@ namespace MtDataTests
 
             SkillDB.Init(data);
             Assert.NotZero(SkillDB.Instance.Count);
-            Assert.True(SkillDB.Instance.ContainsKey("싸우기"));
+            Assert.True(SkillDB.Instance.ContainsKey("레지스트"));
+            Assert.AreEqual(RangeType.E, SkillDB.Instance["레지스트"].RangeType);
+            Assert.AreEqual(4, (int)SkillDB.Instance["레지스트"].RangeType);
         }
         [Test]
         public void TestAbilityDB()
