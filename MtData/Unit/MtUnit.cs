@@ -200,6 +200,13 @@ namespace Mtdata
         /// <summary>
         ///타입
         /// </summary>      
-        public int Type { get; set; }
+        public UnitType UnitType { get; set; }
+    }
+    public enum UnitType {
+        None,
+        Vo,
+        Da,
+        Vi,
+        ToP
     }
 }

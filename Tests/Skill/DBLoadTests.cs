@@ -47,6 +47,7 @@ namespace MtDataTests
             UnitDB.Init(data);
             Assert.NotZero(UnitDB.Instance.Count);
             Assert.True(UnitDB.Instance.ContainsKey("[Character]akizuki_ritsukoA"));
+            Assert.AreEqual(UnitType.Vi, UnitDB.Instance["[Character]akizuki_ritsukoA"].UnitType);
         }
         [Test]
         public void TestEnemyDB()
