@@ -23,8 +23,16 @@ namespace MtDataTests
             SkillDB.Init(data);
             Assert.NotZero(SkillDB.Instance.Count);
             Assert.True(SkillDB.Instance.ContainsKey("레지스트"));
+            // Linear
+            Assert.AreEqual(RangeType.C, SkillDB.Instance["싸우기"].RangeType);
+            // Cross
+            Assert.AreEqual(RangeType.A, SkillDB.Instance["마법"].RangeType);
+            //
+            Assert.AreEqual(RangeType.E, SkillDB.Instance["대회전"].RangeType);
+            // SelfTarget
+            Assert.AreEqual(RangeType.E, SkillDB.Instance["러블리캐논"].RangeType);
+            //
             Assert.AreEqual(RangeType.E, SkillDB.Instance["레지스트"].RangeType);
-            Assert.AreEqual(4, (int)SkillDB.Instance["레지스트"].RangeType);
         }
         [Test]
         public void TestAbilityDB()
