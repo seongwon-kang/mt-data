@@ -40,7 +40,7 @@ namespace Mtdata
         ///<summary>
         /// 기술의
         ///  종류</summary>
-        public int SkillType {get; set;}
+        public SkillType SkillType {get; set;}
         ///<summary>
         /// 위력에
         ///  영향주는 스테이터스1</summary>
@@ -58,9 +58,9 @@ namespace Mtdata
         /// [%]</summary>
         public int Affect2 {get; set;}
         ///<summary>
-        /// 발동자
-        /// ,대상 조절</summary>
-        public int TargetType {get; set;}
+        /// 발동자,대상 조절
+        /// </summary>
+        public TargetType TargetType {get; set;}
         ///<summary>
         /// 부여하는
         ///  상태1</summary>
@@ -124,7 +124,7 @@ namespace Mtdata
         ///<summary>
         /// 아이템
         /// ?(1=YES)</summary>
-        public int IsItem {get; set;}
+        public BoolType IsItem {get; set;}
         ///<summary>
         /// 대사1
         /// </summary>
@@ -144,11 +144,11 @@ namespace Mtdata
         ///<summary>
         /// 속성
         ///  분류</summary>
-        public int AttrCategory {get; set;}
+        public AttrCategory AttrCategory {get; set;}
         ///<summary>
         /// 거리분류
         /// </summary>
-        public int RangeCategory {get; set;}
+        public RangeCategory RangeCategory {get; set;}
         ///<summary>
         /// 간략연출:자기 중심
         /// </summary>
