@@ -28,13 +28,17 @@ namespace Mtdata
             foreach (var item in units)
             {
                 var unit = item as MtUnit;
-                if (!Instance.ContainsKey(unit.Name))
+                string[] parts = unit.CharaChip.Split('/');
+
+                string key = parts[parts.Length - 1].Split('.')[0];
+
+                if (!Instance.ContainsKey(key))
                 {
-                    Instance[unit.Name] = unit;
+                    Instance[key] = unit;
                 }
                 else
                 {
-                    Instance[unit.Name + (i++)] = unit;
+                    Instance[key + (i++)] = unit;
                 }
             }
         }

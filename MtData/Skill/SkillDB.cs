@@ -32,7 +32,7 @@ namespace Mtdata
 
                 string key = parts[parts.Length - 1];
 
-                if (!Instance.ContainsKey(skill.Name))
+                if (!Instance.ContainsKey(key))
                 {
                     Instance[key] = skill;
                 }

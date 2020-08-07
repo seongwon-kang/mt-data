@@ -33,6 +33,7 @@ namespace MtDataTests
 
             AbilityDB.Init(data);
             Assert.NotZero(AbilityDB.Instance.Count);
+            Assert.True(AbilityDB.Instance.ContainsKey("순간이동"));
         }
         [Test]
         public void TestUnitDB()
@@ -43,6 +44,7 @@ namespace MtDataTests
 
             UnitDB.Init(data);
             Assert.NotZero(UnitDB.Instance.Count);
+            Assert.True(UnitDB.Instance.ContainsKey("[Character]akizuki_ritsukoA"));
         }
         [Test]
         public void TestEnemyDB()
