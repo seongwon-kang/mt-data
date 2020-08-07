@@ -22,6 +22,7 @@ namespace MtDataTests
 
             SkillDB.Init(data);
             Assert.NotZero(SkillDB.Instance.Count);
+            Assert.True(SkillDB.Instance.ContainsKey("싸우기"));
         }
         [Test]
         public void TestAbilityDB()
@@ -52,6 +53,7 @@ namespace MtDataTests
 
             EnemyDB.Init(data);
             Assert.NotZero(EnemyDB.Instance.Count);
+            Assert.True(EnemyDB.Instance.ContainsKey("[Monster]Unknown01"));
         }
         
         [Test]
